@@ -1,0 +1,23 @@
+.footer {
+    text-align: center;
+    background-color:#000;
+    color: white;
+  }
+  .title{
+    color:#919496;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .text{
+    color: ivory;
+  }
+  .text:hover,
+  .text:active{
+    color: #1DB954;
+    text-decoration: none;
+  }
+  .list{
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
