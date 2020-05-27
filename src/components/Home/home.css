@@ -30,26 +30,33 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .colored-section {
-  background-color: #40bad5;
+  background-color: #111d5e;
   color: #fff;
   text-align: center;
+  padding: 7%;
 }
 
 .white-section {
-  background-color: #035aa6;
+  background-color: #dae1e7;
   text-align: center;
+}
+.white-section p{
+  color: #111d5e;
+}
+.white-section h3{
+  color: #111d5e;
 }
 
 
 .align-button {
-  margin: 5% 3% 5% 0;
+  margin: 5% 3% 0 0;
 }
 
 
 #title {
   background-color: #111d5e;
   color: #ffffff;
-  text-align: left;
+  text-align: center;
 }
 
 #title .container-fluid {
@@ -75,11 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-box {
-  padding: 4.5%;
+  padding: 1%;
 }
 
 .icon {
-  color: #46b3e6;
+  color: #17a2b8;
   margin-bottom: 1rem;
 }
 
@@ -96,4 +103,13 @@ h1, h2, h3, h4, h5, h6 {
   .title-image {
     position: static;
   }
+}
+.carousel-indicators {
+  bottom:-50px;
+}
+.carousel-inner {
+  margin-bottom:5px;
+}
+.topic-heading{
+  padding-bottom: 2%;
 }
