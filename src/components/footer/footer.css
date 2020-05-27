@@ -10,6 +10,8 @@
   }
   .text{
     color: ivory;
+    font-family:"Montserrat-Black";
+
   }
   .text:hover,
   .text:active{
