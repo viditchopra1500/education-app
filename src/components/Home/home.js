@@ -1,19 +1,16 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './home.css'
+import {Link } from 'react-router-dom';
 function Home(){
     return(<div>
         {/* title section */}
-        <section className="colored-section" id="title">
+        <section id="title">
             <div className="container-fluid">
-                <div className="col-lg-6 buffer">
-                    <h1 className="big-heading">High Performance Computing</h1>
-                    <a className="btn btn-outline-info btn-lg align-button" href="/">Get Started</a>
-                    <a className="btn btn-outline-info btn-lg align-button" href="#cta">Explore</a>
-                </div>
-                <div class="col-lg-6">
-                    <img className="title-image" src="./images/intro.png" alt="intro-img" />
-                </div>
+                <h1 className="big-heading">High Performance Computing</h1>
+                <p>High Performance Computing most generally refers to the practice of aggregating computing power in a way that delivers much higher performance than one could get out of a typical desktop computer or workstation in order to solve large problems in science, engineering, or business.</p>
+                <Link to="/get-started" className="btn btn-info btn-lg align-button">Get Started</Link>
+                <a className="btn btn-info btn-lg align-button" href="#cta">Explore</a>
             </div>
         </section>
         {/* feature section */}
@@ -40,9 +37,61 @@ function Home(){
         </section>
         {/* explore section */}
         <section className="colored-section" id="cta">
-            <div className="container-fluid">
-                <h3 className="big-heading">Add content here</h3>
+        <h1 className="topic-heading">Topics That We Cover...</h1>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h4>System Calls</h4>
+                    <h4>Virtual Memory</h4>
+                    <h4>Registers</h4>
+                    <h4>Addressing Modes</h4>
+                    <h4>Types Of instructions</h4>
+                </div>
+                <div class="carousel-item">
+                    <h4>ISA</h4>
+                    <h4>Floating Point Arithmetic</h4>
+                    <h4>ALU</h4>
+                    <h4>Cache</h4>
+                    <h4>Locality</h4>
+                </div>
+                <div class="carousel-item">
+                    <h4>Cache Replacement Policy</h4>
+                    <h4>Page Table</h4>
+                    <h4>TLB</h4>
+                    <h4>Pipeline</h4>
+                    <h4>Hazards</h4>
+                </div>
+                <div class="carousel-item">
+                    <h4>IPC</h4>
+                    <h4>Process Scheduling Algorithm</h4>
+                    <h4>Preemption</h4>
+                    <h4>Priority inversions</h4>
+                    <h4>Interrupts</h4>
+                </div>
+                <div class="carousel-item">
+                    <h4>Profiling</h4>
+                    <h4>File System</h4>
+                    <h4>Links</h4>
+                    <h4>Belady's Anomaly</h4>
+                    <h4>Setuid bit</h4>
+                </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
         </section>
         {/*footer*/}
 

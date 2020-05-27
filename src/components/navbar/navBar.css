@@ -2,14 +2,15 @@
     display: flex;
     justify-content: flex-start;
     border-width: 2px;
-    background-color: black;
+    background-color: #17a2b8;
     color: white;
-    padding: 20px;
+    padding: 6px;
     width: 100%;
 }
 .nv{
     margin-left: 30px;
-    font-size: large;
+    font-size: 1.25rem;
+    font-family:"Montserrat-Bold";
 }
 .text{
     color: ivory;
@@ -18,11 +19,13 @@
   }
   .text:hover,
   .text:active{
-    color: #1DB954;
+    color: #111d5e;
+    text-decoration: none;
   }
   .total{
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    font-family: "Montserrat-Bold";
   }
   .homepage{
      margin-left: 20px;
