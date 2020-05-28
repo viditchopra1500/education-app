@@ -10,10 +10,11 @@
 .nv{
     margin-left: 30px;
     font-size: 1.25rem;
-    font-family:"Montserrat-Bold";
 }
 .text{
     color: ivory;
+    font-family:"Montserrat-Black";
+
   }
   .text:hover,
   .text:active{

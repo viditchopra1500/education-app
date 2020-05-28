@@ -30,6 +30,7 @@ const footer=(props)=>{
                     <li className="list"><a href="https://www.instagram.com/" className="text">
                     <img alt="facebook" src={insta} height="30px"/>
                         </a></li>
+                    <li></li>
                     </ul>
                     </div>
                 </div>
