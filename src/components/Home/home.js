@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './home.css'
 import {Link } from 'react-router-dom';
 function Home(){
-    return(<div>
+    return(<div className="scroll">
         {/* title section */}
         <section id="title">
             <div className="container-fluid">
@@ -83,17 +83,16 @@ function Home(){
                     <h4>Setuid bit</h4>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators"  data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleIndicators" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
         </section>
-        {/*footer*/}
 
 </div>)
 }

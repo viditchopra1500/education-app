@@ -9,7 +9,7 @@ p{
   word-wrap: inherit;
   color: white;
 }
-h1, h2, h3, h4, h5, h6 {
+div h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat-Bold";
   color: white;
 }
@@ -112,4 +112,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .topic-heading{
   padding-bottom: 2%;
+}
+
+html {
+  scroll-behavior: smooth;
 }

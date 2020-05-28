@@ -1,0 +1,21 @@
+.jumbotron{
+    padding: 5% 6% 7%;
+}
+.big-heading{
+    margin-bottom: 20px;
+}
+.feature-title{
+    text-align: center;
+}
+.middle{
+    margin-bottom: 100px;
+}
+.header{
+    background-color:#e9ecef;
+}
+.desc{
+    margin-bottom: 20px;
+}
+.row{
+    font-size: 19px;
+}

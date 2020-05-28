@@ -13,10 +13,9 @@ import Footer from './footer/footer'
 import Home from './Home/home'
 import GetStarted from './getStarted/getStarted'
 import AboutUs from './AboutUs/aboutUs'
-
 function blog() {
   return (
-      <div>
+      <div className="scrolling">
         <div className="top">
         <Navbar></Navbar>
         </div>
