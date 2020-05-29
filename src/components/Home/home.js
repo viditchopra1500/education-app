@@ -3,6 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './home.css'
 import {Link } from 'react-router-dom';
 function Home(){
+    const car1=["System Calls","Virtual Memory","Registers","Addressing Modes","Types Of instructions"];
+    const car2=["ISA","Floating Point Arithmetic","ALU","Cache","Locality"];
+    const car3=["Cache Replacement Policy","Page Table","TLB","Pipeline","Hazards"];
+    const car4=["IPC","Process Scheduling Algorithm","Preemption","Priority inversions","Interrupts"];
+    const car5=["Profiling","File Systems","Links","Belady's Anomaly","Setuid bit"];
     return(<div className="scroll">
         {/* title section */}
         <section id="title">
@@ -48,39 +53,19 @@ function Home(){
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <h4>System Calls</h4>
-                    <h4>Virtual Memory</h4>
-                    <h4>Registers</h4>
-                    <h4>Addressing Modes</h4>
-                    <h4>Types Of instructions</h4>
+                    {car1.map((value)=><h4>{value}</h4>)}
                 </div>
                 <div class="carousel-item">
-                    <h4>ISA</h4>
-                    <h4>Floating Point Arithmetic</h4>
-                    <h4>ALU</h4>
-                    <h4>Cache</h4>
-                    <h4>Locality</h4>
+                    {car2.map((value)=><h4>{value}</h4>)}
                 </div>
                 <div class="carousel-item">
-                    <h4>Cache Replacement Policy</h4>
-                    <h4>Page Table</h4>
-                    <h4>TLB</h4>
-                    <h4>Pipeline</h4>
-                    <h4>Hazards</h4>
+                    {car3.map((value)=><h4>{value}</h4>)}
                 </div>
                 <div class="carousel-item">
-                    <h4>IPC</h4>
-                    <h4>Process Scheduling Algorithm</h4>
-                    <h4>Preemption</h4>
-                    <h4>Priority inversions</h4>
-                    <h4>Interrupts</h4>
+                    {car4.map((value)=><h4>{value}</h4>)}
                 </div>
                 <div class="carousel-item">
-                    <h4>Profiling</h4>
-                    <h4>File System</h4>
-                    <h4>Links</h4>
-                    <h4>Belady's Anomaly</h4>
-                    <h4>Setuid bit</h4>
+                    {car5.map((value)=><h4>{value}</h4>)}
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators"  data-slide="prev">
