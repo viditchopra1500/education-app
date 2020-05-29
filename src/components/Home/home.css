@@ -3,13 +3,13 @@ body {
   text-align: center;
 }
 
-p{
+.scroll p{
   font-family: "Montserrat";
   text-align: center;
   word-wrap: inherit;
   color: white;
 }
-div h1, h2, h3, h4, h5, h6 {
+.scroll h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat-Bold";
   color: white;
 }
