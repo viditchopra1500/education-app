@@ -5,7 +5,7 @@ function navBar() {
     return (
         <div className="total">
         <div className="nav">
-        <Link to="/" class="text nv">HPC</Link>
+        <Link to="/" className="text nv">HPC</Link>
         </div>
         <div className="nav right">
         <Link to="/get-started" className="text nv">Get started</Link>
