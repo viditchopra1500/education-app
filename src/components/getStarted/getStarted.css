@@ -1,3 +1,21 @@
-.video{
+.material{
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.list-group{
+    max-height: 670px;
+
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+#result_panel{
+    margin-left: 30px;
+    align-self: start;
+
+}
+.video-player{
+    height: 50%;
+    width: 50%;
 }
