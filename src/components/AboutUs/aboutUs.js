@@ -34,31 +34,37 @@ const aboutUs=(props)=>{
             </div>
             <div  className="feature-title desc">
                 This is a guided project under Prof. Rupesh Nasre , Faculty CSE ,IITM.
-                Our team consists of 8 members
+                Our team consists of 10 members
             </div>
             <div className="row">
             <div className="feature-box col-md-3">
-                <ol className="list">
-                    <li>Adit</li>
+                <ol className="list tit">
+                    <h5>Web dev Team</h5>
+                    <li>Shridhar</li>
                     <li>Vidit</li>
                 </ol>
             </div>
             <div className="feature-box col-md-3">
-                <ol className="list">
-                <li>Hariharan K</li>
-                <li>Janarthanan K</li>
-            </ol>
-            </div>
-            <div className="feature-box col-md-3">
-            <ol className="list">
-                <li>Kavi</li>
+                <ol className="list tit">
+                <h5>Video Team 1</h5>
+                <li>Adit</li>
+                <li>Divya</li>
                 <li>Niketha Nethaji</li>
             </ol>
             </div>
             <div className="feature-box col-md-3">
-            <ol className="list">
-                <li>Shridhar</li>
+            <ol className="list tit">
+            <h5>Video Team 2</h5>
                 <li>Aishvarya Gopu</li>
+                <li>Janarthanan K</li>
+            </ol>
+            </div>
+            <div className="feature-box col-md-3">
+            <ol className="list tit">
+                <h5>App dev team</h5>
+                <li>Hariharan K</li>
+                <li>Kavi</li>
+                <li>Krishna</li>
             </ol>
             </div>
 
