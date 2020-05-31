@@ -41,6 +41,12 @@
   .navbar-light .navbar-nav .nav-link{
     color: white;
   }
+  .navbar-light .navbar-nav .nav-link:hover{
+    color: blue;
+  }
   .brand-name{
     color: white;
+  }
+  .brand-name:hover{
+    color: blue;
   }
