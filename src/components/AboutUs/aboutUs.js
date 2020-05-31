@@ -37,29 +37,29 @@ const aboutUs=(props)=>{
                 Our team consists of 8 members
             </div>
             <div className="row">
-            <div className="feature-box col-lg-3">
-                Adit
+            <div className="feature-box col-md-3">
+                <ol className="list">
+                    <li>Adit</li>
+                    <li>Vidit</li>
+                </ol>
             </div>
-            <div className="feature-box col-lg-3">
-                Vidit
+            <div className="feature-box col-md-3">
+                <ol className="list">
+                <li>Hariharan K</li>
+                <li>Janarthanan K</li>
+            </ol>
             </div>
-            <div className="feature-box col-lg-3">
-                Hariharan K
+            <div className="feature-box col-md-3">
+            <ol className="list">
+                <li>Kavi</li>
+                <li>Niketha Nethaji</li>
+            </ol>
             </div>
-            <div className="feature-box col-lg-3">
-                Janarthanan K                
-            </div>
-            <div className="feature-box col-lg-3">
-                Kavi
-            </div>
-            <div className="feature-box col-lg-3">
-                Niketha Nethaji
-            </div>
-            <div className="feature-box col-lg-3">
-                Shridhar
-            </div>
-            <div className="feature-box col-lg-3">
-                Aishvarya Gopu
+            <div className="feature-box col-md-3">
+            <ol className="list">
+                <li>Shridhar</li>
+                <li>Aishvarya Gopu</li>
+            </ol>
             </div>
 
             </div>

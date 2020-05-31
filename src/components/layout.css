@@ -2,6 +2,6 @@
 .content{
     
     /* display: flex; */
-    margin-top: 25px;
+    margin-top: 40px;
     min-height: 100vh;    /*//to give the view port height you want the*/
  }                        /* //element to have */
