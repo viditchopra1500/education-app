@@ -19,3 +19,6 @@
 .row{
     font-size: 19px;
 }
+.list{
+    list-style: none;
+}

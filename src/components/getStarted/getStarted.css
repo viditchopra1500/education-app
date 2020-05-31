@@ -25,3 +25,6 @@
     background-color: aliceblue;
     margin-top: 3rem;
 }
+.container-fluid{
+    padding :5% 0 0 0;
+}
