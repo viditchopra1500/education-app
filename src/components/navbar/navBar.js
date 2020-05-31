@@ -3,7 +3,7 @@ import React from 'react';
 import './navBar.css';
 function navBar() {
     return (
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light ">
 <Link class="nav-link brand-name" to="/">HPC</Link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
