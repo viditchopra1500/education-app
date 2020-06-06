@@ -3,26 +3,26 @@
     background-color:#17a2b8;
     color: white;
   }
-  .title h4{
+  .footer.title h4{
     text-decoration: underline;
   }
-  .title{
+  .footer.title{
     color:white;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
     font-family:"Montserrat-Black";
   }
-  .text{
+  .footer.text{
     color: ivory;
     font-family:"Montserrat-Black";
 
   }
-  .text:hover,
-  .text:active{
+  .footer.text:hover,
+  .footer.text:active{
     color: #111d5e;
     text-decoration: none;
   }
-  .list{
+  .footer.list{
     padding: 2px;
     font-size: 16px;
     line-height: 1.6;
