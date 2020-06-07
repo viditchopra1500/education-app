@@ -1,120 +1,98 @@
-body {
-  font-family: "Montserrat";
+.card-image {
+  grid-area: image;
+}
+.card-text {
+  grid-area: text;
+  text-decoration: none;
+
+}
+.card-stats {
+  grid-area: stats;
+  text-decoration: none; 
+  text-decoration: none;
+
+}
+.card {
+  width: 20%px;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 160px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  text-decoration: none;
+
+  border-radius: 18px;
+  background: white;
+  /* box-shadow: 5px 5px 15px rgba(0,0,0,0.9); */
+  font-family: roboto;
   text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
 }
-
-.scroll p{
-  font-family: "Montserrat";
-  text-align: center;
-  word-wrap: inherit;
-  color: white;
+.card-image {
+  grid-area: image;
+  background: url("https://helloacm.com/wp-content/uploads/2017/01/openmp_multiple_threads_master.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
 }
-.scroll h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat-Bold";
-  color: white;
+.card-text {
+  grid-area: text;
+  margin: 25px;
+  color: red;
+  text-decoration: none;
 }
-.big-heading {
-  font-family: "Montserrat-Black";
-  font-size: 3.5rem;
-  line-height: 1.5;
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size:13px;
+  text-decoration: none;
+
 }
-
-.section-heading {
-  font-size: 3rem;
-  line-height: 1.5;
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+  text-decoration: none;
 }
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+  text-decoration: none;
 
-.container-fluid{
-  padding: 7% 15%;
 }
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  text-decoration: none;
 
-
-.colored-section {
-  background-color: #111d5e;
-  color: #fff;
-  text-align: center;
-  padding: 7%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
 }
-
-.white-section {
-  background-color: #dae1e7;
-  text-align: center;
-  
-}
-.white-section p{
-  color: #111d5e;
-}
-.white-section h3{
-  color: #111d5e;
-}
-
-
-.align-button {
-  margin: 5% 3% 0 0;
-}
-
-
-#title {
-  background-color: #111d5e;
-  color: #ffffff;
-  text-align: center;
-}
-
-#title .container-fluid {
-  padding: 3% 15% 7%;
-}
-
-
-.title-image {
-  width: 80%;
-  position: absolute;
-  left:100%;
-  bottom:1rem;
-}
-
-
-#features {
+.card-stats .stat {
   display: flex;
+  align-items: center;
   justify-content: center;
-}
+  flex-direction: column;
+  text-decoration: none;
 
-.feature-title {
-  font-size: 1.5rem;
+  color: white;
+  padding:10px;
 }
+.card:hover {
+  transform: scale(1.15);
+  text-decoration: none;
 
-.feature-box {
-  padding: 1%;
 }
+.pack{
+  color: red;
+  text-decoration: none;
 
-.icon {
-  color: #17a2b8;
-  margin-bottom: 1rem;
 }
+.pack{
+  padding-left: 10%;
+  text-decoration: none;
 
-.icon:hover {
-  color: #111d5e;
-}
-
-@media (max-width: 1028px) {
-
-  #title {
-    text-align: center;
-  }
-
-  .title-image {
-    position: static;
-  }
-}
-.carousel-indicators {
-  bottom:-50px;
-}
-.carousel-inner {
-  margin-bottom:5px;
-}
-.topic-heading{
-  padding-bottom: 2%;
-}
-
-html {
-  scroll-behavior: smooth;
 }

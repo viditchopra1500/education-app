@@ -5,19 +5,19 @@ const aboutUs=(props)=>{
     return (
         <section className="aboutus">
         <div className="container-fluid header">
-            <div className="big-heading">
+            <div className="big-heading aboutus">
                 Who We Are
             </div>
-            <div className="feature-title">
+            <div className="feature-title top">
                 HPC is an e-learning app that aims to provide high quality video lectures from the topic of 
                 high performance computing. 
                 The HPC learning app makes use of original content, rich animations, interactive simulations and engaging video
                  lessons from India’s brightest minds. This app is made during the internship period under Prof Rupesh Nasre , CSE, IITM 
             </div>
         </div>
-        <div className="container-fluid">
+        <div className="container-fluid middle">
             <img src={goal} alt="goal" height="100px"></img>
-            <div className="big-heading">
+            <div className="big-heading aboutus">
                 Mission
             </div>
             <div  className="feature-title middle">
@@ -29,14 +29,14 @@ const aboutUs=(props)=>{
             </div>
             <div className="container-fluid header">
             <i class="fas fa-users fa-5x"></i>
-            <div className="big-heading">
+            <div className="big-heading aboutus">
                 Our Team
             </div>
             <div  className="feature-title desc">
                 This is a guided project under Prof. Rupesh Nasre , Faculty CSE ,IITM.
                 Our team consists of 10 members
             </div>
-            <div className="row">
+            <div className="row aboutus">
             <div className="feature-box col-md-3">
                 <ol className="list tit">
                     <h5>Web dev Team</h5>
