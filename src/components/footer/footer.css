@@ -1,6 +1,6 @@
 .footer {
     text-align: center;
-    background-color:#17a2b8;
+    /* background-color:#17a2b8; */
     color: white;
   }
   .footer.title h4{
@@ -19,7 +19,7 @@
   }
   .footer.text:hover,
   .footer.text:active{
-    color: #111d5e;
+    color: #3bba9c;
     text-decoration: none;
   }
   .footer.list{

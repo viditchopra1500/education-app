@@ -1,6 +1,25 @@
-
-.content{
-    
-    /* display: flex; */
-    min-height: 100vh;    /*//to give the view port height you want the*/
- }                        /* //element to have */
+:focus {outline:0 !important;}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.body-dark{
+    font-family: "Montserrat";
+    text-align: center;
+    background-color: #060c21;
+}
+.body-light{
+    font-family: "Montserrat";
+    text-align: center;
+    background-color: #fff;
+    transition: background-color 2s;
+}
+.transition-dark{
+    transition: background-color 2s;
+}
+.line{
+    height:3px;
+    background-color: #3bba9c;
+    width: 100%;
+    margin-top: 1px;
+}

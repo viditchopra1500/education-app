@@ -1,5 +1,5 @@
 .navbar.navbar-expand-lg{
-  background-color: #51a3b8;
+  /* background-color: #51a3b8; */
   color: white;
 }
 .navbar-light .navbar-nav .nav-link{
@@ -7,12 +7,13 @@
   font-size: 1.1em;
 }
 .navbar-light .navbar-nav .nav-link:hover{
-  color: blue;
+  color:#3bba9c;
 }
-.brand-name{
+
+.nav-icon{
   color: white;
   font-size: 1.1em;
 }
-.brand-name:hover{
-  color: blue;
+.nav-icon:hover{
+  color: #3bba9c;
 }
