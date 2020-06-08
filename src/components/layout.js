@@ -13,6 +13,7 @@ import Footer from './footer/footer'
 import Home from './Home/home'
 import GetStarted from './getStarted/getStarted'
 import AboutUs from './AboutUs/aboutUs'
+import ScrollToTop from './../ScrollToTop'
 function Edu() {
   const [isLight,setTheme]=useState(0);
   document.body.classList.add('body-dark');//applying dark-mode by default
@@ -23,6 +24,7 @@ function Edu() {
         <hr className="line" />
         </div>
       <div className="content">
+      <ScrollToTop />
       <Switch>
       <Route
         path='/'

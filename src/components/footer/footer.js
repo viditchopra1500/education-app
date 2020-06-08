@@ -15,18 +15,18 @@ const footer=(props)=>{
                     <div className="col">
                     <div className="footer title"><h4>Links</h4></div>
                         <ul className="list-unstyled">
-                        <li className="footer list"><Link to="/" type="button" ><h5 className="footer text">Home</h5></Link></li>
-                        <li className="footer list"><Link to="/about-us"><h5 className="footer text">About Us</h5></Link></li>
+                        <li className="footer list"><Link to="/" type="button" style={{textDecoration:'none'}} ><h5 className="footer text">Home</h5></Link></li>
+                        <li className="footer list"><Link to="/about-us" style={{textDecoration:'none'}}><h5 className="footer text">About Us</h5></Link></li>
                         &copy;{new Date().getFullYear()} IIT Madras | All rights reserved
                         </ul>
                     </div>
                     <div className="col">
                     <div className="footer title"><h4>Follow Us On</h4></div>
                     <ul className="list-unstyled">
-                    <li className="footer list"><a href="https://www.facebook.com/" className="text">
+                    <li className="footer list"><a href="https://www.facebook.com/ReachIITM/" className="text">
                     <img  src={facebook} alt="facebook" height="30px"/>
                     </a></li>
-                    <li className="footer list"><a href="https://www.instagram.com/" className="text">
+                    <li className="footer list"><a href="https://www.instagram.com/explore/locations/13479514/iit-madras/" className="text">
                     <img alt="facebook" src={insta} height="30px"/>
                         </a></li>
                     <li></li>
