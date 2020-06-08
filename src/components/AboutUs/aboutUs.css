@@ -5,7 +5,7 @@
 
 .container-fluid.header{
     /* background-color:#e9ecef; */
-    padding: 4% 2%;
+    padding: 4% 4%;
 
 }
 .container-fluid.bottom{
@@ -25,6 +25,8 @@
 }
 .list.tit{
     list-style: none;
+    padding-left: 0%;
+
 }
 .tit h5{
     margin-top: 3rem;

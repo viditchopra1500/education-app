@@ -12,7 +12,7 @@
   text-align: center;
 }
 .title-section .container-fluid {
-  padding: 3% 15% 7%;
+  padding: 3% 8% 7%;
 }
 .title-heading {
   font-family: "Montserrat-Black";
@@ -21,7 +21,7 @@
   color: #3bba9c;
 }
 .title-button{
-  padding: 10px;
+  padding: 7px;
   margin-top: 2.75rem;
   text-decoration: none;
   color: #eee;
