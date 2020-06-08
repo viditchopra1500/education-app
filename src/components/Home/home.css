@@ -1,98 +1,110 @@
-.card-image {
-  grid-area: image;
-}
-.card-text {
-  grid-area: text;
-  text-decoration: none;
-
-}
-.card-stats {
-  grid-area: stats;
-  text-decoration: none; 
-  text-decoration: none;
-
-}
-.card {
-  width: 20%px;
-  display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 160px 210px 80px;
-  grid-template-areas: "image" "text" "stats";
-  text-decoration: none;
-
-  border-radius: 18px;
-  background: white;
-  /* box-shadow: 5px 5px 15px rgba(0,0,0,0.9); */
-  font-family: roboto;
+.home-div p{
+  font-family: "Montserrat";
   text-align: center;
-  transition: 0.5s ease;
-  cursor: pointer;
-  margin:30px;
+  word-wrap: inherit;
 }
-.card-image {
-  grid-area: image;
-  background: url("https://helloacm.com/wp-content/uploads/2017/01/openmp_multiple_threads_master.jpg");
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
+.home-div h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
 }
-.card-text {
-  grid-area: text;
-  margin: 25px;
-  color: red;
+/* Start Title-section */
+.title-section{
+  color: #ffffff;
+  text-align: center;
+}
+.title-section .container-fluid {
+  padding: 3% 15% 7%;
+}
+.title-heading {
+  font-family: "Montserrat-Black";
+  font-size: 4rem;
+  line-height: 1.5;
+  color: #3bba9c;
+}
+.title-button{
+  padding: 10px;
+  margin-top: 2.75rem;
+  text-decoration: none;
+  color: #eee;
+  display: inline-block;
+  border: 1px solid #fff;
+  transition: 0.5s;
+  opacity: 1;
+  width:25rem;
+  font-size: 25px;
+}
+.title-button:hover {
+  background-color: #3bba9c;
+  color: #000;
   text-decoration: none;
 }
-.card-text .date {
-  color: rgb(255, 7, 110);
-  font-size:13px;
-  text-decoration: none;
-
+@media (max-width: 992px) {
+  .title-section {
+    text-align: center;
+  }
+  .title-button{
+    margin-left:-2rem;
+  }
 }
-.card-text p {
-  color: grey;
-  font-size:15px;
-  font-weight: 300;
-  text-decoration: none;
-}
-.card-text h2 {
-  margin-top:0px;
-  font-size:28px;
-  text-decoration: none;
-
-}
-.card-stats {
-  grid-area: stats; 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  text-decoration: none;
-
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
-}
-.card-stats .stat {
+/* End Title-section */
+/* Start Feature-section */
+.feature-section {
+  text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-decoration: none;
-
-  color: white;
-  padding:10px;
 }
-.card:hover {
-  transform: scale(1.15);
-  text-decoration: none;
-
+.feature-section .container-fluid{
+  padding :1rem 0 0 0;
 }
-.pack{
-  color: red;
-  text-decoration: none;
-
+.feature-para{
+  color: #fff;
 }
-.pack{
-  padding-left: 10%;
-  text-decoration: none;
-
+.feature-title-home {
+  font-size: 1.5rem;
+  color: #3bba9c;
+  text-align: center;
 }
+.feature-box {
+  padding: 0% 5% 1% 5%;
+}
+.feature-icon {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.feature-icon:hover {
+  color: #3bba9c;
+}
+/* End Feature-section */
+/* Start Card-section */
+.card-section.container-fluid{
+  padding :5% 0 0 0;
+}
+.card-section .row{
+  font-size: 19px;
+}
+@media (min-width: 992px){
+  .fir,.sec,.thi{
+    padding:7% 5% 0% 5%;
+  }
+  .below-first{
+    padding:7% 5% 7% 21.5%;
+  }
+  .below-second{
+    padding:7% 21.5% 7% 5%;
+  }
+}
+.fir .box:before {
+  background: linear-gradient(315deg, #3bba9c, #3bba9c);
+}
+.sec .box:before {
+  background: linear-gradient(315deg, #3bba9c, #3bba9c);
+}
+.thi .box:before {
+  background: linear-gradient(315deg, #3bba9c, #3bba9c);
+}
+.fou .box:before {
+  background: linear-gradient(315deg, #3bba9c, #3bba9c);
+}
+.fif .box:before {
+  background: linear-gradient(315deg, #3bba9c, #3bba9c);
+}
+/* End Card-section */

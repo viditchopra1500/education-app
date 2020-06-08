@@ -28,7 +28,7 @@ const GetStarted=(props)=>{
         setActive(e.target.id);
     }
     return (
-        <div className="container-fluid getstarted" id="entire-body">
+        <div className="container-fluid getstarted" id="entire-body" >
                 <div className="row">
                     <div className="col-lg-8 col-sm-12 col-xs-12">
                         <div className='wrapper'>

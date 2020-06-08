@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './layout.css';
 import { Route ,Switch} from 'react-router-dom';
 // import {
@@ -13,24 +13,52 @@ import Footer from './footer/footer'
 import Home from './Home/home'
 import GetStarted from './getStarted/getStarted'
 import AboutUs from './AboutUs/aboutUs'
-function blog() {
+function Edu() {
+  const [isLight,setTheme]=useState(0);
+  document.body.classList.add('body-dark');//applying dark-mode by default
   return (
       <div className="scrolling">
         <div className="top">
-        <Navbar></Navbar>
+        <Navbar theme={isLight} handleFunc={setTheme} ></Navbar>
+        <hr className="line" />
         </div>
       <div className="content">
       <Switch>
-      <Route path="/" exact component={Home}/>
-      <Route path="/get-started" exact component={GetStarted}/>
-      <Route path="/about-us" exact component={AboutUs}/>
+      <Route
+        path='/'
+        exact
+        render={(props) => <Home {...props} theme={isLight} />}
+      />
+      <Route
+        path='/get-started'
+        exact
+        render={(props) => <GetStarted {...props} theme={isLight} />}
+      />
+      <Route
+        path='/about-us'
+        exact
+        render={(props) => <AboutUs {...props} theme={isLight} />}
+      />
       </Switch>
       </div>
       <div className="footer">
-      <Footer ></Footer>
+      <hr className="line" />
+      <Footer theme={isLight} ></Footer>
       </div>
       </div>
   )
 }
-
-export default blog 
+    // const [isLight,setTheme]=useState(0);
+    // function handleClick(){
+    //   setTheme(!Number(isLight))
+    // }
+    // if(Number(isLight)){
+    //   document.body.classList.add('transition-dark');
+    //   document.body.classList.add('body-light');
+    //   document.body.classList.remove('body-dark');
+    // }else{
+    //   document.body.classList.add('body-dark');
+    //   document.body.classList.remove('body-light');
+    // }
+    // document.body.classList.add('body-dark');//applying dark mode by default
+export default Edu ;

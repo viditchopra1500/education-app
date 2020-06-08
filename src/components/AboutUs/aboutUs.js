@@ -27,8 +27,8 @@ const aboutUs=(props)=>{
             Delivering world class learning experience, We try to make learning contextual and visual, and not just theoretical.
             </div>
             </div>
-            <div className="container-fluid header">
-            <i class="fas fa-users fa-5x"></i>
+            <div className="container-fluid bottom">
+            <i class="user-icon fas fa-users fa-5x"></i>
             <div className="big-heading aboutus">
                 Our Team
             </div>
