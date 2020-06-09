@@ -1,17 +1,19 @@
 .navbar.navbar-expand-lg{
   /* background-color: #51a3b8; */
-  color: white;
+  color:inherit;
 }
-.navbar-dark .navbar-nav .nav-link{
-  color: white;
+.nav-Link{
+  color: inherit;
   font-size: 1.1em;
+  margin-right: 1rem;
+  margin-top: 0.65rem;
 }
-.navbar-dark .navbar-nav .nav-link:hover{
+.nav-Link:hover{
   color:#3bba9c;
+  text-decoration: none;
 }
-
 .nav-icon{
-  color: white;
+  color:inherit;
   font-size: 1.1em;
 }
 .nav-icon:hover{

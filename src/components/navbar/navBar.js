@@ -9,9 +9,9 @@ function navBar(props) {
   function iconStyles() {
     return {
       darkIcon: {
-        color: 'white',
+        color: '#d7f1eb',
       },
-      darkButton: {
+      button: {
         "&:hover": {
           backgroundColor: "#3bba9c"
         }
@@ -19,11 +19,6 @@ function navBar(props) {
       lightIcon: {
         color: '#060c21',
       },
-      lightButton: {
-        "&:hover": {
-          backgroundColor: "#FF69B4"
-        }
-      }
     }
   }//styles of light button and icon
   function handleClick(){
@@ -31,7 +26,7 @@ function navBar(props) {
   }//handling click from light button
   const classes = makeStyles(iconStyles)();
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class={props.theme?"navbar navbar-expand-lg navbar-light":"navbar navbar-expand-lg navbar-dark"}>
       <Link class="nav-link nav-icon" to="/"><i class="fa fa-lg fa-home" aria-hidden="true"></i></Link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,8 +36,8 @@ function navBar(props) {
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <ul class="navbar-nav mr-auto my-2 mt-lg-0">
-            <Link style={{textDecoration:'none'}} to="/about-us"><p className="nav-link mr-sm-2">About Us</p></Link>
-            <IconButton onClick={handleClick} className={props.theme?classes.lightButton:classes.darkButton}>
+            <Link className="nav-Link" to="/about-us">About Us</Link>
+            <IconButton onClick={handleClick} className={classes.button}>
               <FlareRoundedIcon className={props.theme?classes.lightIcon:classes.darkIcon} fontSize="inherit" />
             </IconButton>
           </ul>

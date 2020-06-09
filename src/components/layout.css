@@ -7,15 +7,17 @@ html {
     font-family: "Montserrat";
     text-align: center;
     background-color: #060c21;
+    color: #fff;
 }
 .body-light{
     font-family: "Montserrat";
     text-align: center;
-    background-color: #fff;
-    transition: background-color 2s;
+    background-color: #d7f1eb;
+    color: #000;
+    transition: background-color 1s;
 }
 .transition-dark{
-    transition: background-color 2s;
+    transition: background-color 1s;
 }
 .line{
     height:3px;

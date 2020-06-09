@@ -1,19 +1,19 @@
 .footer {
     text-align: center;
     /* background-color:#17a2b8; */
-    color: white;
+    color:inherit;
   }
   .footer.title h4{
     text-decoration: underline;
   }
   .footer.title{
-    color:white;
+    color:inherit;
     text-align: center;
     margin-top: 40px;
     font-family:"Montserrat-Black";
   }
   .footer.text{
-    color: ivory;
+    color:inherit;
     font-family:"Montserrat-Black";
 
   }

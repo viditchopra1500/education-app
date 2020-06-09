@@ -30,43 +30,44 @@
 }
 .panel-title{
     text-align: center;
-    color: white;
+    color: #3bba9c;
 }
 .list-group-item.active{
     background-color:#3bba9c;
     border: #060c21;
 }
 .list-group-item{
-    color: white;
-    background-color:#060c21;
+    color:inherit;
+    background-color:inherit;
 }
 * {
     scrollbar-width: thin;
-    scrollbar-color:#060c21 #3bba9c;
+    scrollbar-color:inherit #3bba9c;
   }
   
   /*Scroll bar configs*/
   *::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
   }
   *::-webkit-scrollbar-track {
-    background: #060c21;
+    /* background: #060c21; */
+    background:inherit;
   }
   *::-webkit-scrollbar-thumb {
     background-color:#3bba9c ;
     border-radius: 20px;
-    border: 3px solid #060c21
+    /* border: 0px solid #060c21; */
   }
   .panel-body::-webkit-scrollbar {
     width: 12px;
   }
   .panel-body::-webkit-scrollbar-track {
-    background: #060c21;
+    background: inherit;
   }
   .panel-body::-webkit-scrollbar-thumb {
     background-color:#3bba9c ;
     border-radius: 20px;
-    border: 3px solid #060c21
+    /* border: 3px solid #060c21 */
   }
   @media (max-width: 992px) {
      .col-lg-4 {
