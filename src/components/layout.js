@@ -17,6 +17,14 @@ import ScrollToTop from './../ScrollToTop'
 function Edu() {
   const [isLight,setTheme]=useState(0);
   document.body.classList.add('body-dark');//applying dark-mode by default
+      if(Number(isLight)){
+      document.body.classList.add('transition-dark');
+      document.body.classList.add('body-light');
+      document.body.classList.remove('body-dark');
+    }else{
+      document.body.classList.add('body-dark');
+      document.body.classList.remove('body-light');
+    }
   return (
       <div className="scrolling">
         <div className="top">
@@ -53,14 +61,6 @@ function Edu() {
     // const [isLight,setTheme]=useState(0);
     // function handleClick(){
     //   setTheme(!Number(isLight))
-    // }
-    // if(Number(isLight)){
-    //   document.body.classList.add('transition-dark');
-    //   document.body.classList.add('body-light');
-    //   document.body.classList.remove('body-dark');
-    // }else{
-    //   document.body.classList.add('body-dark');
-    //   document.body.classList.remove('body-light');
     // }
     // document.body.classList.add('body-dark');//applying dark mode by default
 export default Edu ;

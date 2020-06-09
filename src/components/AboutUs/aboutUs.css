@@ -33,7 +33,7 @@
     color:#3bba9c;
 }
 .tit li{
-  color: #fff;
+  color: inherit;
 }
 .aboutus {
     font-family: "Montserrat";
@@ -46,10 +46,10 @@
     color: #3bba9c;
   }
   .user-icon{
-    color:white ;
+    color:inherit ;
   }
 
   .feature-title {
-    font-size: 1.5rem;
-    color: #fff;
+    font-size: 1.3rem;
+    color: inherit;
   }

@@ -15,8 +15,8 @@ const footer=(props)=>{
                     <div className="col">
                     <div className="footer title"><h4>Links</h4></div>
                         <ul className="list-unstyled">
-                        <li className="footer list"><Link to="/" type="button" style={{textDecoration:'none'}} ><h5 className="footer text">Home</h5></Link></li>
-                        <li className="footer list"><Link to="/about-us" style={{textDecoration:'none'}}><h5 className="footer text">About Us</h5></Link></li>
+                        <li className="footer list"><Link to="/" type="button" style={{textDecoration:'none',color:"inherit"}} ><h5 className="footer text">Home</h5></Link></li>
+                        <li className="footer list"><Link to="/about-us" style={{textDecoration:'none',color:"inherit"}}><h5 className="footer text">About Us</h5></Link></li>
                         &copy;{new Date().getFullYear()} IIT Madras | All rights reserved
                         </ul>
                     </div>
