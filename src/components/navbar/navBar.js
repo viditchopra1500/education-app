@@ -34,7 +34,7 @@ function navBar(props) {
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0 lefter-form">
           <ul class="navbar-nav mr-auto my-2 mt-lg-0">
             <Link className="nav-Link" to="/about-us">About Us</Link>
             <IconButton onClick={handleClick} className={classes.button}>
@@ -42,6 +42,14 @@ function navBar(props) {
             </IconButton>
           </ul>
         </form>
+        <div className="lefter-search-bar">
+            <input type="text" class="search-bar form-control mr-sm-2" placeholder="Search..." value={props.searchQuery} onChange={props.handleChangeSearchBox}></input>
+            <div className={props.sug?"suggestions-box list-group":"suggestions-box-hide list-group"}>
+              {props.sugArray.map((val,i)=>{
+                return <Link to="/get-started" className="no-style"><h6 className="suggestions list-group-item list-group-item-action" onClick={()=>{props.handleSearch(val);}} id={i}>{val}</h6></Link>
+              })}
+            </div>
+        </div>
       </div>
     </nav>
 )

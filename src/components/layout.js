@@ -1,13 +1,10 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './layout.css';
 import { Route ,Switch} from 'react-router-dom';
-// import {
-//     CSSTransition,
-//     TransitionGroup,
-//   } from 'react-transition-group';
+import _ from 'lodash';
+import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@material-ui/core'
-
 import Navbar from './navbar/navBar'
 import Footer from './footer/footer'
 import Home from './Home/home'
@@ -16,6 +13,63 @@ import AboutUs from './AboutUs/aboutUs'
 import ScrollToTop from './../ScrollToTop'
 function Edu() {
   const [isLight,setTheme]=useState(0);
+  const [topics,setTopics]=useState([[{tits:'System Calls',url:'https://www.youtube.com/embed/7cfOMkcwX64?enablejsapi=1'}]]);
+useEffect(() => {
+  const fetchData = async () => {
+    const result = await axios(
+      "https://raw.githubusercontent.com/shridhar-t/Json-edu-app/master/data.json",
+    );
+    setTopics(result.data);
+  };
+
+  fetchData();
+}, []);
+  const oneDimensional=[].concat(...topics);
+  const titles=oneDimensional.map((obj)=>{
+    return obj.tits;
+  })
+  const [titlename,setTitlename]=useState(1);
+  const [active,setActive]=useState(0);
+  const [url,setUrl]=useState(topics[titlename-1][0].url);
+  const [searchQuery,setSearch]=useState('');
+  const [suggestions,showSuggest]=useState(0);
+  function handleClickVidList(e){
+    setUrl(topics[titlename-1][Number(e.target.id)].url);
+    setActive(e.target.id);
+}
+function removeSpaces(string){
+  return string.replace(/\s/g, "")
+}
+function handleSearch(sug){
+  showSuggest(0);
+  for(let z=0;z<topics.length;z++){
+      if(topics[z].map((val)=>{ return _.capitalize(removeSpaces(val.tits)); }).indexOf(_.capitalize(removeSpaces(String(sug)))) !== -1){
+          setTitlename(z+1);
+          setUrl(topics[z][topics[z].map((val)=>{ return _.capitalize(removeSpaces(val.tits)); }).indexOf(_.capitalize(removeSpaces(String(sug))))].url);
+          setActive(topics[z].map((val)=>{ return _.capitalize(removeSpaces(val.tits)); }).indexOf(_.capitalize(removeSpaces(String(sug)))));
+          setSearch("")
+          return;
+      }
+  }
+  setSearch("")
+}
+function handleCardRoute(letter){
+  setTitlename(letter);
+  setUrl(topics[letter-1][0].url);
+  setActive(0)
+}
+const filteredSuggestions = titles.filter(
+  suggestion =>
+    _.capitalize(removeSpaces(suggestion)).indexOf(_.capitalize(removeSpaces(searchQuery))) > -1
+);
+function handleChangeSearchBox(e){
+  if(e.target.value.length===0){
+    showSuggest(0);
+  }else{
+    showSuggest(1);
+  }
+  setSearch(e.target.value);
+}
   document.body.classList.add('body-dark');//applying dark-mode by default
       if(Number(isLight)){
       document.body.classList.add('transition-dark');
@@ -28,7 +82,7 @@ function Edu() {
   return (
       <div className="scrolling">
         <div className="top">
-        <Navbar theme={isLight} handleFunc={setTheme} ></Navbar>
+        <Navbar sug={suggestions} sugArray={filteredSuggestions} theme={isLight} handleFunc={setTheme} handleChangeSearchBox={handleChangeSearchBox} handleSearch={handleSearch} searchQuery={searchQuery} ></Navbar>
         <hr className="line" />
         </div>
       <div className="content">
@@ -37,12 +91,12 @@ function Edu() {
       <Route
         path='/'
         exact
-        render={(props) => <Home {...props} theme={isLight} />}
+        render={(props) => <Home {...props} handleCardRoute={handleCardRoute} theme={isLight}  />}
       />
       <Route
         path='/get-started'
         exact
-        render={(props) => <GetStarted {...props} theme={isLight} />}
+        render={(props) => <GetStarted {...props} theme={isLight} active={active} titlename={titlename} url={url} topics={topics} handleClickVidList={handleClickVidList} />}
       />
       <Route
         path='/about-us'
@@ -58,9 +112,10 @@ function Edu() {
       </div>
   )
 }
-    // const [isLight,setTheme]=useState(0);
-    // function handleClick(){
-    //   setTheme(!Number(isLight))
-    // }
-    // document.body.classList.add('body-dark');//applying dark mode by default
+// const topics=[[{tits:'System Calls',url:'https://www.youtube.com/embed/7cfOMkcwX64?enablejsapi=1'},{tits:'Virtual Memory',url:'https://www.youtube.com/embed/_1tnoez75ws?enablejsapi=1'},{tits:'Cache Replacement Policy',url:'https://www.youtube.com/embed/u1xHbfhq0KQ?enablejsapi=1'},{tits:'hpc4',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc5',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc6',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc7',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc8',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc9',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc10',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc11',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc12',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc13',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc14',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc15',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc16',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc17',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc18',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc19',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'hpc20',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'}],
+// [{tits:'Parallel Programming1',url:'https://www.youtube.com/embed/6kycPB7RMnY?enablejsapi=1'},{tits:'Parallel Programming2',url:'https://www.youtube.com/embed/_HHdCehuI9Q?enablejsapi=1'},{tits:'Parallel Programming3',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'Parallel Programming4',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'}],
+// [{tits:'Open Multi-Processing1',url:'https://www.youtube.com/embed/6kycPB7RMnY?enablejsapi=1'},{tits:'Open Multi-Processing2',url:'https://www.youtube.com/embed/_HHdCehuI9Q?enablejsapi=1'},{tits:'Open Multi-Processing3',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'Open Multi-Processing4',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'}],
+// [{tits:'Graphics Processing Unit1',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'Graphics Processing Unit2',url:'https://www.youtube.com/embed/_HHdCehuI9Q?enablejsapi=1'},{tits:'Graphics Processing Unit3',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'Graphics Processing Unit4',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'}],
+// [{tits:'Message Passing Interface1',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'Message Passing Interface2',url:'https://www.youtube.com/embed/_HHdCehuI9Q?enablejsapi=1'},{tits:'Message Passing Interface3',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'},{tits:'Message Passing Interface4',url:'https://www.youtube.com/embed/D4jj3HHrnSU?enablejsapi=1'}]
+// ]
 export default Edu ;

@@ -2,6 +2,46 @@
   /* background-color: #51a3b8; */
   color:inherit;
 }
+.no-style{
+  text-decoration: none;
+  color: inherit;
+}
+.no-style:hover{
+  text-decoration: none;
+  color:inherit;
+}
+.lefter-form{
+  margin-right: 0rem;
+}
+.lefter-search-bar{
+  margin-right: 2rem;
+}
+.search-bar{
+  margin-left: 1rem;
+  width: 15rem;
+}
+.suggestions:hover{
+  background-color: #3bba9c;
+}
+.suggestions-box{
+  max-height: 12rem;
+  overflow-y: scroll;
+  text-align: left;
+  margin-left: 1rem;
+  z-index: 9999;
+  position:absolute;
+  background-color:white;
+  color:black;
+  width: 17%;
+}
+@media (max-width: 992px){
+  .suggestions-box{
+    width:245px
+  }
+}
+.suggestions-box-hide{
+  display:none;
+}
 .nav-Link{
   color: inherit;
   font-size: 1.1em;

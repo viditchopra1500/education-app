@@ -8,7 +8,9 @@ function Card(props){
                 <h2>{props.place}</h2>
                 <h3>{props.title}</h3>
                 <p>{props.content}</p>
-                <Link to={{pathname:"/get-started",titlename:props.titlename}} className="Link">Get Started</Link>
+                <Link to={{pathname:"/get-started"}} className="Link" onClick={()=>{
+                    props.handleCardRoute(props.titlename);
+                }}>Get Started</Link>
             </div>
         </div>
     );
