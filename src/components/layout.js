@@ -70,6 +70,11 @@ function handleChangeSearchBox(e){
   }
   setSearch(e.target.value);
 }
+function collapse(event){
+  if (!event.currentTarget.contains(event.relatedTarget)) {
+    showSuggest(0);
+  }
+}
   document.body.classList.add('body-dark');//applying dark-mode by default
       if(Number(isLight)){
       document.body.classList.add('transition-dark');
@@ -82,7 +87,7 @@ function handleChangeSearchBox(e){
   return (
       <div className="scrolling">
         <div className="top">
-        <Navbar sug={suggestions} sugArray={filteredSuggestions} theme={isLight} handleFunc={setTheme} handleChangeSearchBox={handleChangeSearchBox} handleSearch={handleSearch} searchQuery={searchQuery} ></Navbar>
+        <Navbar sug={suggestions} collapse={collapse} sugArray={filteredSuggestions} theme={isLight} handleFunc={setTheme} handleChangeSearchBox={handleChangeSearchBox} handleSearch={handleSearch} searchQuery={searchQuery} ></Navbar>
         <hr className="line" />
         </div>
       <div className="content">

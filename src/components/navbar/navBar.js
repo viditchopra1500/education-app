@@ -42,9 +42,9 @@ function navBar(props) {
             </IconButton>
           </ul>
         </form>
-        <div className="lefter-search-bar">
+        <div  tabIndex="0" onBlur={ props.collapse } className="lefter-search-bar">
             <input type="text" class="search-bar form-control mr-sm-2" placeholder="Search..." value={props.searchQuery} onChange={props.handleChangeSearchBox}></input>
-            <div className={props.sug?"suggestions-box list-group":"suggestions-box-hide list-group"}>
+            <div  className={props.sug?"suggestions-box list-group":"suggestions-box-hide list-group"}>
               {props.sugArray.map((val,i)=>{
                 return <Link to="/get-started" className="no-style"><h6 className="suggestions list-group-item list-group-item-action" onClick={()=>{props.handleSearch(val);}} id={i}>{val}</h6></Link>
               })}
