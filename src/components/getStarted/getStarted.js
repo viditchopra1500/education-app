@@ -7,11 +7,11 @@ const GetStarted=(props)=>{
                 <div className="row">
                     <div className="col-lg-8 col-sm-12 col-xs-12">
                         <div className='wrapper container-fluid'>
-                        <iframe title="video" className="player" type="text/html" width="640" height="390" videoId={props.url}
+                        <iframe title="video" className="player" type="text/html" width="640" height="390" videoid={props.url}
   src={props.url}
-  allowfullscreen="allowfullscreen"
+  allowFullScreen="allowfullscreen"
 
-  frameborder="0"></iframe>
+  frameBorder="0"></iframe>
                         </div>
                     </div>
                     <div className="col-lg-4 video-list">
