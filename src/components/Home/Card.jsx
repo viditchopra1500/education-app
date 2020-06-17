@@ -3,8 +3,8 @@ import "./Card.css";
 import {Link } from 'react-router-dom';
 function Card(props){
     return(
-        <div class={props.theme?"box light":"box dark"}>
-            <div class="content">
+        <div className={props.theme?"box light":"box dark"}>
+            <div className="content">
                 <h2>{props.place}</h2>
                 <h3>{props.title}</h3>
                 <p>{props.content}</p>

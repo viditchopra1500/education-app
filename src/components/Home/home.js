@@ -3,12 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './home.css'
 import Card from "./Card.jsx"
 function Home(props){
+  var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&navigator.userAgent &&navigator.userAgent.indexOf('CriOS') === -1 &&navigator.userAgent.indexOf('FxiOS') === -1;
     return(<div className="home-div">
         <section className="title-section">
             <div className="container-fluid">
                 <h1 className="title-heading">HPC EDUCATION</h1>
                 <p> "A platform for HPC enthusiasts to learn the basic concepts in high performance computing."</p>
-                <a href="#cardid" className={props.theme?"title-button-light":"title-button-dark"}>Explore</a>
+                {isSafari?<a href="#cardid" className={props.theme?"title-button-light":"title-button-dark"} target="_blank">Explore</a>:<a href="#cardid" className={props.theme?"title-button-light":"title-button-dark"}>Explore</a>}
             </div>
         </section>
         <section className="feature-section" id="features">

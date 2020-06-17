@@ -28,7 +28,7 @@ const aboutUs=(props)=>{
             </div>
             </div>
             <div className="container-fluid bottom">
-            <i class="user-icon fas fa-users fa-5x"></i>
+            <i className="user-icon fas fa-users fa-5x"></i>
             <div className="big-heading aboutus">
                 Our Team
             </div>
