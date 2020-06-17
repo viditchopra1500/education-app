@@ -20,7 +20,7 @@ const GetStarted=(props)=>{
                             <div className="panel-body">
                             <ul className="started list-group">
                             {props.topics[props.titlename-1].map((value,i)=>{
-                                    return( <button className={!(Number(props.active)===i)?"started align-items list-group-item":"started align-items list-group-item active"} onClick={props.handleClickVidList} id={i} key={i}>{i+1}.{value.tits}</button>);
+                                    return( <button className={!(Number(props.active)===i)?"started align-items list-group-item":"started align-items list-group-item active"} onClick={props.handleClickVidList} id={i} key={i}>{i+1}.{value.title}</button>);
                                 })}
                             </ul>
                             </div>
