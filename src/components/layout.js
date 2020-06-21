@@ -12,7 +12,7 @@ import GetStarted from './getStarted/getStarted'
 import AboutUs from './AboutUs/aboutUs'
 import ScrollToTop from './../ScrollToTop'
 function Edu() {
-  const [isLight,setTheme]=useState(0);
+  const [isLight,setTheme]=useState(0);        
   const [topics,setTopics]=useState([[{title:'System Calls',url:'https://www.youtube.com/embed/7cfOMkcwX64?enablejsapi=1'}]]);
 useEffect(() => {
   const fetchData = async () => {

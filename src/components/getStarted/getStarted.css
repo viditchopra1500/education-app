@@ -14,7 +14,7 @@
     height: 100%;
 }
 .started.list-group{
-    max-height: 650px;
+    max-height: 800px;
     margin-bottom: 10px;
     overflow:auto;
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -73,4 +73,13 @@
      .col-lg-4 {
       margin-top: 50px;
     }
+  }
+  .file{
+    margin-top: 60px;
+  }
+  .feature-title-started{
+    color:#3bba9c ;
+  }
+  .drive-link{
+    color: white;
   }
