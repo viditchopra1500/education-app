@@ -65,3 +65,7 @@
 .nav-icon:hover{
   color: #3bba9c;
 }
+.active{
+  background-color: #3bba9c;
+  color: inherit !important;
+}

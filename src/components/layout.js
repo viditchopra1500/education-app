@@ -41,6 +41,7 @@ function removeSpaces(string){
   return string.replace(/\s/g, "")
 }
 function handleSearch(sug){
+  console.log(sug);
   showSuggest(0);
   for(let z=0;z<topics.length;z++){
       if(topics[z].map((val)=>{ return _.capitalize(removeSpaces(val.title)); }).indexOf(_.capitalize(removeSpaces(String(sug)))) !== -1){

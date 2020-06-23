@@ -1,11 +1,14 @@
-import {Link } from 'react-router-dom';
-import React from 'react';
+import {Link,useHistory } from 'react-router-dom';
+import React,{useState} from 'react';
 import './navBar.css';
 import FlareRoundedIcon from '@material-ui/icons/FlareRounded';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 
-function navBar(props) {
+function NavBar(props) {
+  const history = useHistory();
+
+  const [cursor,setItem]=useState(0);
   function iconStyles() {
     return {
       darkIcon: {
@@ -21,6 +24,26 @@ function navBar(props) {
       },
     }
   }//styles of light button and icon
+  function handleKeyDown(e) {
+    // arrow up/down button should select next/previous list element
+    if (e.keyCode === 38 && cursor > 0) {
+      setItem(cursor-1);
+    } else if (e.keyCode === 40 && cursor < props.sugArray.length - 1) {
+      setItem(cursor+1);
+    }
+    if(e.keyCode === 13){
+      props.handleSearch(props.sugArray[cursor]);
+      let path = `/get-started`;
+      history.push(path);
+      setItem(0);
+   }
+    if(e.which===38 || e.which===40){
+      e.preventDefault();
+  }
+}
+  function changeItem() {
+    setItem(-1);
+  }
   function handleClick(){
     props.handleFunc(!props.theme);
   }//handling click from light button
@@ -42,11 +65,11 @@ function navBar(props) {
             </IconButton>
           </ul>
         </form>
-        <div  tabIndex="0" onBlur={ props.collapse } className="lefter-search-bar">
-            <input type="text" className="search-bar form-control mr-sm-2" placeholder="Search..." value={props.searchQuery} onChange={props.handleChangeSearchBox}></input>
+        <div  onBlur={ props.collapse } className="lefter-search-bar">
+            <input tabIndex="0" type="text" className="search-bar form-control mr-sm-2" placeholder="Search..." value={props.searchQuery} onKeyDown={ handleKeyDown } onChange={props.handleChangeSearchBox}></input>
             <div  className={props.sug?"suggestions-box list-group":"suggestions-box-hide list-group"}>
               {props.sugArray.map((val,i)=>{
-                return <Link to="/get-started" className="no-style" key={i}><h6 className="suggestions list-group-item list-group-item-action" onClick={()=>{props.handleSearch(val);}} id={i}>{val}</h6></Link>
+                return <Link  onMouseOver={changeItem} to="/get-started" className="no-style" key={i}><h6 className={cursor===i?"suggestions list-group-item list-group-item-action active":"suggestions list-group-item list-group-item-action"} onClick={()=>{props.handleSearch(val);}} id={i}>{val}</h6></Link>
               })}
             </div>
         </div>
@@ -54,6 +77,4 @@ function navBar(props) {
     </nav>
 )
 }
-export default navBar
-
-
+export default NavBar
