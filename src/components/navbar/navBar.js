@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 function NavBar(props) {
   const history = useHistory();
 
-  const [cursor,setItem]=useState(0);
+  const [cursor,setItem]=useState(-1);
   function iconStyles() {
     return {
       darkIcon: {
@@ -41,6 +41,7 @@ function NavBar(props) {
       e.preventDefault();
   }
 }
+
   function changeItem() {
     setItem(-1);
   }
@@ -49,7 +50,7 @@ function NavBar(props) {
   }//handling click from light button
   const classes = makeStyles(iconStyles)();
   return (
-    <nav className={props.theme?"navbar navbar-expand-lg navbar-light":"navbar navbar-expand-lg navbar-dark"}>
+    <nav  className={props.theme?"navbar navbar-expand-lg navbar-light":"navbar navbar-expand-lg navbar-dark"}>
       <Link className="nav-link nav-icon" to="/"><i className="fa fa-lg fa-home" aria-hidden="true"></i></Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -66,7 +67,7 @@ function NavBar(props) {
           </ul>
         </form>
         <div  onBlur={ props.collapse } className="lefter-search-bar">
-            <input tabIndex="0" type="text" className="search-bar form-control mr-sm-2" placeholder="Search..." value={props.searchQuery} onKeyDown={ handleKeyDown } onChange={props.handleChangeSearchBox}></input>
+            <input tabIndex="0" type="text" className="search-bar form-control mr-sm-2" placeholder="Search..." value={props.searchQuery} onKeyDown={ handleKeyDown }  onChange={(sug)=>{props.handleChangeSearchBox(sug);setItem(-1);}}></input>
             <div  className={props.sug?"suggestions-box list-group":"suggestions-box-hide list-group"}>
               {props.sugArray.map((val,i)=>{
                 return <Link  onMouseOver={changeItem} to="/get-started" className="no-style" key={i}><h6 className={cursor===i?"suggestions list-group-item list-group-item-action active":"suggestions list-group-item list-group-item-action"} onClick={()=>{props.handleSearch(val);}} id={i}>{val}</h6></Link>
