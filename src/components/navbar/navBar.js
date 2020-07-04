@@ -4,7 +4,8 @@ import './navBar.css';
 import FlareRoundedIcon from '@material-ui/icons/FlareRounded';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-
+import logoLight from "./light.png";
+import logoDark from "./dark.png"
 function NavBar(props) {
   const history = useHistory();
 
@@ -51,7 +52,9 @@ function NavBar(props) {
   const classes = makeStyles(iconStyles)();
   return (
     <nav  className={props.theme?"navbar navbar-expand-lg navbar-light":"navbar navbar-expand-lg navbar-dark"}>
-      <Link className="nav-link nav-icon" to="/"><i className="fa fa-lg fa-home" aria-hidden="true"></i></Link>
+      <Link className="nav-link nav-icon logo" to="/">
+        <img src={props.theme?logoLight:logoDark} width="170" height="50" alt="not here" className="logo" />
+      </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
