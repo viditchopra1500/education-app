@@ -13,11 +13,11 @@
 .lefter-form{
   margin-right: 0rem;
 }
-.lefter-search-bar{
-  margin-right: 2rem;
-}
+/* .lefter-search-bar{
+  margin-right: 2rem; 
+} */
 .search-bar{
-  margin-left: 1rem;
+    margin-left: 1rem;
   width: 15rem;
 }
 .suggestions:hover{
@@ -28,15 +28,21 @@
   overflow-y: scroll;
   text-align: left;
   margin-left: 1rem;
+
   z-index: 9999;
   position:absolute;
   background-color:white;
   color:black;
-  width: 17%;
+  width: 15rem;
+
 }
 @media (max-width: 992px){
   .suggestions-box{
-    width:245px
+    width:245px;
+  margin-left: 0px;
+  }
+  .search-bar{
+  margin-left: 0px;
   }
 }
 .suggestions-box-hide{
@@ -58,4 +64,8 @@
 }
 .nav-icon:hover{
   color: #3bba9c;
+}
+.active{
+  background-color: #3bba9c;
+  color: inherit !important;
 }

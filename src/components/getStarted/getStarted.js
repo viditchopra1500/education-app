@@ -13,6 +13,8 @@ const GetStarted=(props)=>{
 
   frameBorder="0"></iframe>
                         </div>
+                        <a className="feature-icon" href="https://docs.google.com/spreadsheets/d/1El-y2OzERveLJTmkg0AGBWkqgcP_EiWF9N4gpmqNf74/edit#gid=0"><i class="feature-icon fas fa-file-pdf fa-4x file"></i></a>
+                        <h3 className="feature-title-started">Voice-over drive link</h3>
                     </div>
                     <div className="col-lg-4 video-list">
                         <div className="panel panel-primary" id="result_panel">

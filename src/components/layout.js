@@ -12,7 +12,7 @@ import GetStarted from './getStarted/getStarted'
 import AboutUs from './AboutUs/aboutUs'
 import ScrollToTop from './../ScrollToTop'
 function Edu() {
-  const [isLight,setTheme]=useState(0);
+  const [isLight,setTheme]=useState(0);        
   const [topics,setTopics]=useState([[{title:'System Calls',url:'https://www.youtube.com/embed/7cfOMkcwX64?enablejsapi=1'}]]);
 useEffect(() => {
   const fetchData = async () => {
@@ -41,6 +41,7 @@ function removeSpaces(string){
   return string.replace(/\s/g, "")
 }
 function handleSearch(sug){
+  console.log(sug);
   showSuggest(0);
   for(let z=0;z<topics.length;z++){
       if(topics[z].map((val)=>{ return _.capitalize(removeSpaces(val.title)); }).indexOf(_.capitalize(removeSpaces(String(sug)))) !== -1){
