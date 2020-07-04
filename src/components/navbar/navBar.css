@@ -2,6 +2,9 @@
   /* background-color: #51a3b8; */
   color:inherit;
 }
+.logo{
+  padding-left: 0rem;
+}
 .no-style{
   text-decoration: none;
   color: inherit;
