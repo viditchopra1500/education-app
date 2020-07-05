@@ -40,8 +40,8 @@ const aboutUs=(props)=>{
             <div className="feature-box col-md-3">
                 <ol className="list tit">
                     <h5>Web dev Team</h5>
-                    <li>Shridhar</li>
-                    <li>Vidit</li>
+                    <li>Shridhar Thakur</li>
+                    <li>Vidit Chopra</li>
                 </ol>
             </div>
             <div className="feature-box col-md-3">

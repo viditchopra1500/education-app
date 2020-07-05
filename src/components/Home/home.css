@@ -101,6 +101,11 @@
 .card-section .row{
   font-size: 19px;
 }
+@media (max-width:992px){
+  .card-section{
+    margin-top: 2rem;
+  }
+}
 @media (min-width: 992px){
   .fir,.sec,.thi{
     padding:7% 5% 0% 5%;

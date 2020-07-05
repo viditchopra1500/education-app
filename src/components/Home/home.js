@@ -36,10 +36,10 @@ function Home(props){
         <section className="container-fluid card-section">
           <div className="row">
             <div className="col-md-4 fir" id="cardid">
-              <Card handleCardRoute={props.handleCardRoute} theme={props.theme} titlename={1} place="01" title="High Performance Computing" content="High Performance Computing enables extracting performance out of your application to solve BIG problems in science, engineering, business, and beyond." />
+              <Card handleCardRoute={props.handleCardRoute} theme={props.theme} titlename={1} place="01" title="High Performance Computing" content="High Performance Computing enables extracting performance out of your application to solve big problems in science, engineering, business, and beyond." />
             </div>
             <div className="col-md-4 sec">
-              <Card handleCardRoute={props.handleCardRoute} theme={props.theme} titlename={2} place="02" title="Parallel Programming" content="Parallel Programming is about thinking using aggregates, synchronizing with multiple workers, and executing simultaneously on several compute units. Together, the team of workers completes its subtasks to achieve efficient completion of a major task." />
+              <Card handleCardRoute={props.handleCardRoute} theme={props.theme} titlename={2} place="02" title="Parallel Programming" content="Parallel Programming is about thinking using aggregates, synchronizing with multiple workers, and executing simultaneously on several compute units." />
             </div>
             <div className="col-md-4 thi">
               <Card handleCardRoute={props.handleCardRoute} theme={props.theme} titlename={3} place="03" title="Open Multi-Processing" content="OpenMP is one of the most popular frameworks to parallelize your CPU applications. It provides an annotation-based API to incrementally parallelize a sequential application." />
@@ -50,7 +50,7 @@ function Home(props){
               <Card handleCardRoute={props.handleCardRoute} theme={props.theme} titlename={4} place="04" title="Graphics Processing Unit" content="CUDA is a popular language to program NVIDIA GPUs. It divides hundreds of thousands of threads into a computation hierarchy, exposes memory hierarchy, and provides several optimization techniques to make programs more efficient." />
             </div>
             <div className="col-md-6 below-second fif">
-              <Card handleCardRoute={props.handleCardRoute} theme={props.theme} titlename={5} place="05" title="Message Passing Interface" content="MPI is a de facto standard to program distributed systems. It works with message passing across various nodes in the network where senders and receivers exchange information, and communicate to achieve a common task. Unlike other paradigms, distributed systems do not have a shared memory." />
+              <Card handleCardRoute={props.handleCardRoute} theme={props.theme} titlename={5} place="05" title="Message Passing Interface" content="MPI is a de facto standard to program distributed systems. It works with message passing across various nodes in the network where senders and receivers exchange information, and communicate to achieve a common task." />
             </div>
           </div>
         </section>
