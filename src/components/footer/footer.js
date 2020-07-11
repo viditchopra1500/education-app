@@ -26,7 +26,7 @@ const footer=(props)=>{
                     <li className="footer list"><a href="https://www.facebook.com/ReachIITM/" className="text">
                     <img  src={facebook} alt="facebook" height="30px"/>
                     </a></li>
-                    <li className="footer list"><a href="https://www.instagram.com/explore/locations/13479514/iit-madras/" className="text">
+                    <li className="footer list"><a href="https://www.instagram.com/reachiitm/" className="text">
                     <img alt="facebook" src={insta} height="30px"/>
                         </a></li>
                     <li></li>
