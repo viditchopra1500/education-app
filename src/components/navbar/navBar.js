@@ -29,7 +29,7 @@ function NavBar(props) {
     // arrow up/down button should select next/previous list element
     if (e.keyCode === 38 && cursor > 0) {
       setItem(cursor-1);
-    } else if (e.keyCode === 40 && cursor < props.sugArray.length - 1) {
+    } else if (e.keyCode === 40 && cursor < 3) {
       setItem(cursor+1);
     }
     if(e.keyCode === 13){
@@ -72,7 +72,7 @@ function NavBar(props) {
         <div  onBlur={ props.collapse } className="lefter-search-bar">
             <input tabIndex="0" type="text" className="search-bar form-control mr-sm-2" placeholder="Search..." value={props.searchQuery} onKeyDown={ handleKeyDown }  onChange={(sug)=>{props.handleChangeSearchBox(sug);setItem(-1);}}></input>
             <div  className={props.sug?"suggestions-box list-group":"suggestions-box-hide list-group"}>
-              {props.sugArray.map((val,i)=>{
+              {props.sugArray.slice(0,4).map((val,i)=>{
                 return <Link  onMouseOver={changeItem} to="/get-started" className="no-style" key={i}><h6 className={cursor===i?"suggestions list-group-item list-group-item-action active":"suggestions list-group-item list-group-item-action"} onClick={()=>{props.handleSearch(val);}} id={i}>{val}</h6></Link>
               })}
             </div>
